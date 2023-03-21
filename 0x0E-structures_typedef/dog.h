@@ -1,30 +1,22 @@
-#ifndef _DOG_H_
-#define _DOG_H_
+#ifndef DOG_H
+#define DOG_H
 
 /**
- * struct dog - This struct creates a new type
- * @name: First member, char pointer
- * @age: Second member, float
- * @owner: Third memeber, char pointer
- *
- * Description: This struct has three elements and is a new type dog
+ * struct dog - structure
+ * @name: name
+ * @age: age
+ * @owner: owner
  */
-
-struct dog
+typedef struct dog
 {
 	char *name;
 	float age;
 	char *owner;
-};
-
-/**
- * dog - Typdef for dog type
- */
-typedef struct dog dog_t;
+} dog_t;
 
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
 dog_t *new_dog(char *name, float age, char *owner);
 void free_dog(dog_t *d);
 
-#endif /* _DOG_H_ */
+#endif /* DOG_H */
